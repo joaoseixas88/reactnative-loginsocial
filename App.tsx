@@ -9,11 +9,13 @@
  */
 
 import React from 'react';
+import { LoggedScreen } from './src/screens/LoggedScreen';
 
-import {Login} from './src/screens/Login';
+import { Login } from './src/screens/Login';
+import { SignUp } from './src/screens/SignUp';
 
 const App = () => {
-  return <Login />;
+  return <LoggedScreen />;
 };
 
 export default App;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import GitHub from '../../Assets/Svg/Github.svg';
+
 import Google from '../../Assets/Svg/Google.svg';
 import {
   IconButton,
@@ -12,21 +13,30 @@ import {
 import { CheckBox } from '../../components/CheckBox';
 import { Colors } from '../../styles/Colors';
 
-export function Login() {
+export function SignUp() {
   const [rememberChecked, setRememberChecked] = useState(false);
+  const [securePassword, setSecurePassword] = useState(true);
   return (
     <View style={styles.container}>
       <View>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Hi, Wellcome Back! 👋</Text>
-          <Text style={styles.subtitle}>Hello again, you’ve been missed!</Text>
+          <Text style={styles.title}>Create an account</Text>
+          <Text style={styles.subtitle}>Connect with your friends today!</Text>
         </View>
         <View style={styles.inputContainer}>
-          <Input label="Email" placeholder="Enter your email" />
+          <Input label="Email Address" placeholder="Enter your email" />
+          <Input
+            label="Phone number"
+            placeholder="Enter your password"
+            styles={{ marginTop: RFValue(12) }}
+            autoComplete={'tel'}
+            keyboardType={'number-pad'}
+          />
           <Input
             label="Password"
             placeholder="Enter your password"
             styles={{ marginTop: RFValue(12) }}
+            passwordType
           />
         </View>
         <View
